@@ -1,0 +1,16 @@
+{   
+    "wifi": {
+      "ssid": "Bedoya_Parra",
+      "password": "ManDUcHmatiC"
+    },
+    "telegram": {
+      "token": "7909588706:AAF5nxs-h3D30CiHV4mTUs7V4R-VFlgwjqQ"
+    },
+    "mqtt": {
+      "broker": "mqtt-dashboard.com",
+      "client": "saferide-esp32-645321563",
+      "port": 1883,
+      "topic": "andina/diplomado/python/saferide/sensors"      
+    }
+  }
+  
