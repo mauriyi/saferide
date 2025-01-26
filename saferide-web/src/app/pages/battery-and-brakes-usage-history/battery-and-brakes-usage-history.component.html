@@ -1,0 +1,49 @@
+<mat-card class="cardWithShadow">
+  <div class="row">
+    <div class="col-lg-6">
+      <mat-card-content>
+        <mat-card-title>Histórico de Datos</mat-card-title>
+        <mat-card-subtitle>Historial de estado de Batería y Frenos</mat-card-subtitle>
+      </mat-card-content>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <mat-card-content class="b-r-1">
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <mat-card-title class="mat-mdc-card-title f-s-22 f-w-500 m-b-8">{{batteryPercentageText}}</mat-card-title>
+            <mat-card-subtitle class="mat-mdc-card-subtitle f-s-13 f-w-400 m-t-0">Estado de carga</mat-card-subtitle>
+          </div>
+          <div>
+            <span class="icon-45 rounded-circle batery-icon-color text-white d-flex align-items-center justify-content-center">
+              <i-tabler name="battery" class="icon-24 d-flex"></i-tabler>
+            </span>
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+      <mat-card-content>
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <mat-card-title class="mat-mdc-card-title f-s-22 f-w-500 m-b-8">{{brakeStatusText}}</mat-card-title>
+            <mat-card-subtitle class="mat-mdc-card-subtitle f-s-13 f-w-400 m-t-0">Estado Pastilla</mat-card-subtitle>
+          </div>
+          <div>
+            <span class="icon-45 rounded-circle brake-icon-color text-white d-flex align-items-center justify-content-center">
+              <i-tabler name="wheel" class="icon-24 d-flex"></i-tabler>
+            </span>
+          </div>
+        </div>
+      </mat-card-content>
+    </div>
+  </div>
+  <div class="b-t-1">
+    <apx-chart [series]="batterybrakesusagehistorychartOptions.series" [chart]="batterybrakesusagehistorychartOptions.chart"
+      [xaxis]="batterybrakesusagehistorychartOptions.xaxis" [stroke]="batterybrakesusagehistorychartOptions.stroke"
+      [tooltip]="batterybrakesusagehistorychartOptions.tooltip" [dataLabels]="batterybrakesusagehistorychartOptions.dataLabels"
+      [legend]="batterybrakesusagehistorychartOptions.legend" [colors]="batterybrakesusagehistorychartOptions.colors"
+      [markers]="batterybrakesusagehistorychartOptions.markers" [fill]="batterybrakesusagehistorychartOptions.fill"
+      [plotOptions]="batterybrakesusagehistorychartOptions.plotOptions" [grid]="batterybrakesusagehistorychartOptions.grid"
+      [yaxis]="batterybrakesusagehistorychartOptions.yaxis"></apx-chart>
+  </div>
+</mat-card>

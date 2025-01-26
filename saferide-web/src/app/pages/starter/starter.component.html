@@ -1,0 +1,64 @@
+<!-- --------------------------------------------------------------------- -->
+<!-- card 1 -->
+<!-- --------------------------------------------------------------------- -->
+<div class="row" *ngIf="showLast24Component">
+  <!-- column -->
+  <div class="col-sm-6 col-lg-6">
+    <mat-card class="cardWithShadow">
+      <mat-card-content class="p-y-24">
+        <mat-card-title class="mat-subtitle-1 f-w-600 m-b-4"
+          >Consumo de Batería Últimas 24 horas</mat-card-title
+        >
+        <div class="d-flex align-items-center">
+          <span class="mat-body-1">{{batteryPercentageText}}</span>
+          <span class="mat-body-1 text-success m-l-auto">{{batteryStatusText}}</span>
+        </div>
+      </mat-card-content>
+      <apx-chart
+        [series]="baterylast24Chart.series"
+        [chart]="baterylast24Chart.chart"
+        [colors]="baterylast24Chart.colors"
+        [stroke]="baterylast24Chart.stroke"
+        [dataLabels]="baterylast24Chart.dataLabels"
+        [legend]="baterylast24Chart.legend"
+        [grid]="baterylast24Chart.grid"
+        [xaxis]="baterylast24Chart.xaxis"
+        [tooltip]="baterylast24Chart.tooltip"
+      >
+      </apx-chart>
+    </mat-card>
+  </div>
+
+  <!-- column text-error -->
+  <div class="col-sm-6 col-lg-6">
+    <mat-card class="cardWithShadow">
+      <mat-card-content class="p-y-24">
+        <mat-card-title class="mat-subtitle-1 f-w-600 m-b-4"
+          >Desgaste de Frenos Últimas 24 horas</mat-card-title
+        >
+        <div class="d-flex align-items-center">
+          <span class="mat-body-1">Estado de pastilla</span>
+          <span class="mat-body-1 text-success m-l-auto">{{brakeStatusText}}</span>
+        </div>
+      </mat-card-content>
+      <apx-chart
+        [series]="brakelast24Chart.series"
+        [chart]="brakelast24Chart.chart"
+        [colors]="brakelast24Chart.colors"
+        [stroke]="brakelast24Chart.stroke"
+        [dataLabels]="brakelast24Chart.dataLabels"
+        [legend]="brakelast24Chart.legend"
+        [grid]="brakelast24Chart.grid"
+        [xaxis]="brakelast24Chart.xaxis"
+        [tooltip]="brakelast24Chart.tooltip"
+      >
+      </apx-chart>
+    </mat-card>
+  </div>
+</div>
+
+<div class="row" *ngIf="showHystoryComponent && allDataRecord && allDataRecord.length">
+  <div class="col-12">
+    <app-battery-and-brakes-usage-history [allDataRecord]="allDataRecord"></app-battery-and-brakes-usage-history>
+  </div>
+</div>

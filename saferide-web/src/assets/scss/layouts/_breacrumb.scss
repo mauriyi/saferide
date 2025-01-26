@@ -1,0 +1,16 @@
+.breadcrumb-item {
+  &:first-child {
+    &:after {
+      content: ">";
+      margin-left: 8px;
+    }
+  }
+  &.active {
+    margin-left: 8px;
+  }
+  a {
+    text-decoration: none;
+    color: $textPrimary;
+    font-size: 14px;
+  }
+}

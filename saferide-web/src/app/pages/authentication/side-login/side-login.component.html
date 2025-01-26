@@ -1,0 +1,39 @@
+<div class="blank-layout-container justify-content-center">
+  <div class="position-relative row w-100 h-100">
+    <div class="col-lg-7 col-xl-8 bg-gredient p-0">
+      <div class="p-24 h-100">
+        <div class="align-items-center justify-content-center img-height d-none d-lg-flex">
+          <img src="/assets/images/backgrounds/login-bg.png" alt="login" style="max-width: 500px" />
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-5 col-xl-4 p-0">
+      <div class="p-32 d-flex align-items-start align-items-lg-center justify-content-center h-100">
+        <div class="row justify-content-center w-100">
+          <div class="col-lg-9 max-width-form">
+            <h4 class="f-w-700 f-s-24 m-0">Bienvenido a SafeRide</h4>
+            <span class="f-s-14 d-block mat-body-1 m-t-8">Tu panel de Administración</span>
+
+            <form class="m-t-30">
+              <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Usuario</mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <input matInput required="" #u1 />
+              </mat-form-field>
+
+              <!-- password -->
+              <mat-label class="mat-subtitle-2 f-s-14 f-w-600 m-b-12 d-block">Contraseña</mat-label>
+              <mat-form-field appearance="outline" class="w-100" color="primary">
+                <input matInput type="password" required="" #p2 />
+              </mat-form-field>
+
+              <button mat-flat-button color="primary" class="w-100" (click)="login(u1.value, p2.value)">
+                Iniciar sesión
+              </button>
+              <!-- input -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
