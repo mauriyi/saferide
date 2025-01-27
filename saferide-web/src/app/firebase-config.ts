@@ -1,6 +1,6 @@
 // firebase-config.ts
 export const firebaseConfig = {
-  apiKey: "AIzaSyAGQOPkrvoRyJOIg_tCxlU4q7VEZLHhWJk",
+  apiKey: "",
     authDomain: "saferide-firebase.firebaseapp.com",
     databaseURL: "https://saferide-firebase-default-rtdb.firebaseio.com",
     projectId: "saferide-firebase",
